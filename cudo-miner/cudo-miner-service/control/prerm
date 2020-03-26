@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+if systemctl -q is-active "cudo-miner"; then
+  echo "Stopping cudo-miner service..."
+  systemctl stop "cudo-miner"
+  sleep 2
+fi
+
+echo "Removing systemd cudo-miner service"
+rm "/etc/systemd/system/cudo-miner.service"
+rm "/etc/default/cudo-miner"
+
+if systemctl -q is-active "cudo-miner"; then
+  echo "Uninstalling systemd cudo-miner service"
+  systemctl disable "cudo-miner"
+  systemctl --system daemon-reload
+  systemctl reset-failed
+fi

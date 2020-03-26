@@ -1,0 +1,17 @@
+[Unit]
+Description=Cudo Miner
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+Group=root
+EnvironmentFile=-/etc/default/cudo-miner
+EnvironmentFile=-/etc/sysconfig/cudo-miner
+ExecStart=/usr/local/cudo-miner/cudo-miner-core
+Restart=always
+WorkingDirectory=/usr/local/cudo-miner
+RestartSec=4
+
+[Install]
+WantedBy=multi-user.target

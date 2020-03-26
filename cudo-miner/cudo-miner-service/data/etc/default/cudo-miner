@@ -1,0 +1,9 @@
+APP_NAME=Cudo Miner
+STORE_PATH=/var/lib/cudo-miner/store
+REGISTRY_PATH=/var/lib/cudo-miner/registry
+BIN_PATH=/usr/local/cudo-miner/bin
+RUNTIME_PATH=/usr/local/cudo-miner/runtime
+SOCKET_PATH=/var/lib/cudo-miner.sock
+EXECUTION_CONTEXT=systemd
+HIDE_LOG_TIMESTAMP=true
+REBOOT_IDLE_TIME=30

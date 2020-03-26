@@ -1,0 +1,6 @@
+Package: cudo-miner-service
+Maintainer: Copyright © 2019 Cudo Ventures Ltd
+Description: Cudo Miner Worker Service
+Architecture: amd64
+Version: 1.1.4
+Depends: cudo-miner-core (= 1.1.4), systemd
