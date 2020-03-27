@@ -7,5 +7,4 @@ COPY cudo-miner-cli/data/* .
 WORKDIR /etc/
 COPY cudo-miner-service/data/* .
 
-#start cudo-miner
-CMD cudominercli enable $username 
+CMD cudominercli enable theskaz
